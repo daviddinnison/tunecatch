@@ -1,12 +1,12 @@
 // react
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './src/store';
+import store from './store';
 
 // components
-import Gateway from './src/gateway';
+import Gateway from './gateway';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
@@ -15,3 +15,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;
