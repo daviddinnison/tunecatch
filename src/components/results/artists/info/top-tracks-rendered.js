@@ -2,7 +2,7 @@
 import React from 'react';
 
 // react native
-import { Text, TouchableHighlight, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 // styles
@@ -11,7 +11,8 @@ import styles from './styles/main';
 class TopTracksRendered extends React.Component {
   render() {
     return (
-      <TouchableHighlight
+      <TouchableOpacity
+        underlayColor={'#fff'}
         style={styles.trackContainer}
         onPress={() => {
           Actions.singleTrackMain({
@@ -26,7 +27,7 @@ class TopTracksRendered extends React.Component {
             plays: {this.props.playcount.toLocaleString('en')}
           </Text>
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   }
 }

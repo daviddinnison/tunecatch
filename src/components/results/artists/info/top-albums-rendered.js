@@ -6,7 +6,7 @@ import {
   Image,
   StyleSheet,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   View
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
@@ -17,7 +17,8 @@ import styles from './styles/main';
 class TopAlbumsRendered extends React.Component {
   render() {
     return (
-      <TouchableHighlight
+      <TouchableOpacity
+      underlayColor={'#fff'}
         onPress={() => {
           Actions.singleAlbum({
             route: this.props.name,
@@ -32,7 +33,7 @@ class TopAlbumsRendered extends React.Component {
             source={{ uri: this.props.image[1]['#text'] }}
           />
         </View>
-      </TouchableHighlight>
+      </TouchableOpacity>
     );
   }
 }

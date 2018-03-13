@@ -30,24 +30,24 @@ class TagsComparison extends React.Component {
       let compareTo = [];
       let base = [];
       //commented out for debugging
-      // let commonTags = [];
-      // for (let i = 0; i < baseRaw.length; i++) {
-      //   base.push(baseRaw[i].name);
-      // }
+      let commonTags = [];
+      for (let i = 0; i < baseRaw.length; i++) {
+        base.push(baseRaw[i].name);
+      }
 
-      // for (let i = 0; i < compareToRaw.length; i++) {
-      //   compareTo.push(compareToRaw[i].name);
-      // }
+      for (let i = 0; i < compareToRaw.length; i++) {
+        compareTo.push(compareToRaw[i].name);
+      }
 
-      // for (let i = 0; i < compareTo.length; i++) {
-      //   for (let j = 0; j < base.length; j++) {
-      //     if (compareTo[i] === base[j]) {
-      //       commonTags.push(base[j]);
-      //     }
-      //   }
-      // }
+      for (let i = 0; i < compareTo.length; i++) {
+        for (let j = 0; j < base.length; j++) {
+          if (compareTo[i] === base[j]) {
+            commonTags.push(base[j]);
+          }
+        }
+      }
 
-      const commonTags=['test', 'test', 'testtest', 'test', 'test']
+      // const commonTags=['test', 'test', 'testtest', 'test', 'test']
       //MAP FUNCTION FOR COMMON TAGS
       const renderCommonTags = commonTags.map((item, index) => (
         <Text style={styles.renderedTagSingle} key={index}>{item}</Text>
