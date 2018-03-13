@@ -18,9 +18,6 @@ class Launch extends React.Component {
     return (
       <Container>
         <Text style={styles.appHeader}>TuneCatch</Text>
-        <Text style={styles.appSubHeader}>
-          There's always more fish in the sea...
-        </Text>
         <MainSearch />
         {/* <Test/> */}
       </Container>

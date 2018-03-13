@@ -39,10 +39,8 @@ export const fonts = {
   lg: 22,
   xl: 28,
   xxl: 36,
-  // primary: 'normal', //serif
-  // secondary: 'sans-serif' //sans serif
-  // primary: 'open-sans-regular', //serif
-  // secondary: 'open-sans-regular' //sans serif
+  primary: 'open-sans-regular', //serif
+  secondary: 'Roboto_medium' //sans serif
 };
 
 const baseStyles = {
@@ -56,7 +54,7 @@ const baseStyles = {
   },
   header: {
     backgroundColor: 'transparent',
-    // fontFamily: fonts.primary,
+    fontFamily: fonts.primary,
     fontSize: fonts.xl,
     fontWeight: 'bold',
     textAlign: 'center'
@@ -69,7 +67,7 @@ const baseStyles = {
   },
   subHeader: {
     backgroundColor: 'transparent',
-    // fontFamily: fonts.primary,
+    fontFamily: fonts.primary,
     fontSize: fonts.md,
     fontWeight: 'bold',
     textAlign: 'center'
@@ -82,7 +80,7 @@ const baseStyles = {
     paddingHorizontal: padding.xs
   },
   mainText: {
-    // fontFamily: fonts.primary
+    fontFamily: fonts.primary
   },
   renderedTags: {
     alignItems: 'flex-start',
@@ -110,7 +108,7 @@ const baseStyles = {
     borderColor: colors.quadrary,
     borderWidth: 2,
     color: colors.quadrary,
-    // fontFamily: fonts.primary,
+    fontFamily: fonts.primary,
     fontSize: fonts.sm,
     margin: margin.xs,
     padding: padding.xs
