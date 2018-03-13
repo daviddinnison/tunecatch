@@ -39,7 +39,7 @@ export const fonts = {
   lg: 22,
   xl: 28,
   xxl: 36,
-  // primary: 'Roboto', //serif
+  // primary: 'normal', //serif
   // secondary: 'sans-serif' //sans serif
   // primary: 'open-sans-regular', //serif
   // secondary: 'open-sans-regular' //sans serif
@@ -82,7 +82,7 @@ const baseStyles = {
     paddingHorizontal: padding.xs
   },
   mainText: {
-    fontFamily: fonts.primary
+    // fontFamily: fonts.primary
   },
   renderedTags: {
     alignItems: 'flex-start',

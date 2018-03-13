@@ -9,7 +9,7 @@ import createStyles, {
 export default (singleArtistInfo = createStyles({
   originalArtistHeader: {
     color: colors.primary,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontSize: fonts.xxl,
     fontWeight: 'bold',
   },
@@ -42,7 +42,7 @@ export default (singleArtistInfo = createStyles({
     width: undefined
   },
   resultName: {
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontSize: fonts.lg,
     fontWeight: 'bold'
   }

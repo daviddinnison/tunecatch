@@ -11,7 +11,7 @@ export default (singleArtistInfo = createStyles({
     backgroundColor: colors.primary,
     color: colors.tertiary,
     fontSize: fonts.xl,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontWeight: "bold",
     padding: padding.md,
     textAlign: "center"    
@@ -19,7 +19,7 @@ export default (singleArtistInfo = createStyles({
   appSubHeader: {
     backgroundColor: "transparent",
     fontSize: fonts.md,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontWeight: "bold",
     marginBottom: margin.md,
     padding: padding.sm,

@@ -18,7 +18,7 @@ export default (singleArtistInfo = createStyles({
 
   artistName: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontSize: fonts.xxl,
     fontWeight: 'bold',
     marginLeft: margin.sm,
@@ -26,14 +26,14 @@ export default (singleArtistInfo = createStyles({
 
   infoHeader: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,
+    // fontFamily: fonts.secondary,
     fontSize: fonts.md,
     fontWeight: 'bold'
   },
 
   playCount: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,
+    // fontFamily: fonts.secondary,
     fontSize: fonts.sm,
     fontStyle: 'italic'
   },
@@ -57,11 +57,11 @@ export default (singleArtistInfo = createStyles({
 
   // tour
   onTour: {
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     color: colors.affirmative
   },
   notTouring: {
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     color: colors.negative
   },
 
@@ -79,14 +79,14 @@ export default (singleArtistInfo = createStyles({
 
   albumName: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontSize: fonts.xl,
     fontWeight: 'bold',
   },
 
   albumArtistNameHead: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontSize: fonts.md,
     fontWeight: 'bold',
 
@@ -112,7 +112,7 @@ export default (singleArtistInfo = createStyles({
   },
   trackHead: {
     color: colors.white,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     marginLeft: margin.md
   },
   trackName: {
@@ -123,14 +123,14 @@ export default (singleArtistInfo = createStyles({
   trackPlays: {
     color: colors.textDefault,
     fontStyle: 'italic',
-    fontFamily: fonts.primary
+    // fontFamily: fonts.primary
   },
 
   // bio
   bioText: {
     backgroundColor: colors.white,
     color: colors.textDefault,
-    fontFamily: fonts.primary,
+    // fontFamily: fonts.primary,
     fontSize: fonts.md,
     padding: padding.sm
   }
