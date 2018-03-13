@@ -21,7 +21,7 @@ class Launch extends React.Component {
         <Text style={styles.appSubHeader}>
           There's always more fish in the sea...
         </Text>
-        {/* <MainSearch /> */}
+        <MainSearch />
         {/* <Test/> */}
       </Container>
     );

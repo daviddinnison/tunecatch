@@ -18,11 +18,11 @@ class Gateway extends Component {
       <Router>
         <Stack key="root">
           <Scene key="launch" component={Launch} />
-          {/* <Scene key="artistInfo" component={ArtistInfoMain} />
+          <Scene key="artistInfo" component={ArtistInfoMain} />
           <Scene key="singleAlbum" component={SingleAlbumMain} />
           <Scene key="singleTrackMain" component={SingleTrackMain} />
           <Scene key="similarArtists" component={ArtistResultsMain} />
-          <Scene key="originalArtistInfo" component={OriginalArtistInfo} /> */}
+          <Scene key="originalArtistInfo" component={OriginalArtistInfo} />
         </Stack>
       </Router>
     );
