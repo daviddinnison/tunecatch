@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 
 // react native
 import { Content, Text } from 'native-base';
-import { Image, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import HTMLView from 'react-native-htmlview';
 
 // components
 import Loader from '../../../common/loader';
@@ -84,9 +85,10 @@ class SingleAlbumMain extends React.Component {
   renderWikiData() {
     if (this.props.album.wiki) {
       return (
-        <Text style={[styles.container, styles.mainText]}>
-          {this.props.album.wiki.content}
-        </Text>
+        <HTMLView value={this.props.album.wiki.content} stylesheet={htmlStyles}/>
+        // <Text style={[styles.container, styles.mainText]}>
+        //   {this.props.album.wiki.content}
+        // </Text>
       );
     } else {
       return (
@@ -135,6 +137,13 @@ class SingleAlbumMain extends React.Component {
     return <Content>{this.renderAlbum()}</Content>;
   }
 }
+
+const htmlStyles = StyleSheet.create({
+  // a: {
+  //   fontWeight: '300',
+  //   color: '#FF3366' // make links coloured pink
+  // },
+});
 
 const mapStateToProps = state => {
   return {

@@ -3,9 +3,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // react native
-import { Image, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 import { Content, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
+import HTMLView from 'react-native-htmlview';
+
 
 // components
 import Loader from '../../../common/loader';
@@ -49,8 +51,13 @@ class SingleTrackMain extends React.Component {
     if (this.props.track.wiki) {
       return (
         <View style={styles.container}>
-          <Text style={[styles.bioText]}>{this.props.track.wiki.content}</Text>
+        
+        <HTMLView value={this.props.track.wiki.content} stylesheet={htmlStyles}/>
         </View>
+        
+        // <View style={styles.container}>
+        //   <Text style={[styles.bioText]}>{this.props.track.wiki.content}</Text>
+        // </View>
       );
     } else {
       return (
@@ -108,6 +115,14 @@ class SingleTrackMain extends React.Component {
     return <Content>{this.renderTrack()}</Content>;
   }
 }
+
+const htmlStyles = StyleSheet.create({
+  // a: {
+  //   fontWeight: '300',
+  //   color: '#FF3366' // make links coloured pink
+  // },
+});
+
 
 const mapStateToProps = state => {
   return {
