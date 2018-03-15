@@ -20,12 +20,12 @@ import musician from './styles/musician.png';
 
 class SingleAlbumMain extends React.Component {
   componentDidMount() {
-    const album = 'Loveless';
-    const artist = 'My Bloody Valentine';
+    // const album = 'Loveless';
+    // const artist = 'My Bloody Valentine';
 
-    this.props.dispatch(getAlbumInfo(album, artist));
+    // this.props.dispatch(getAlbumInfo(album, artist));
 
-    // this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
+    this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
   }
 
   formatPlays(num) {

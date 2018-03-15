@@ -10,7 +10,7 @@ export default (singleArtistInfo = createStyles({
   artistInfoContainer: {
     backgroundColor: colors.secondary
   },
-
+  
   // header
   artistHead: {
     marginBottom: margin.md

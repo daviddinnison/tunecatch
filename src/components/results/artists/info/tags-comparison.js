@@ -22,6 +22,12 @@ class TagsComparison extends React.Component {
   renderComparison() {
     if (this.props.loadingTracks) {
       return <Loader />;
+    } else if (this.props.baseComparisonTags.length === 0) {
+      return (
+        <Text style={[styles.undefinedData, styles.leftMargin]}>
+          No top tags in common with {this.props.originalArtist}. They should still be a solid match.
+        </Text>
+      );
     } else {
       // comparing tags in common. convert array of objects into arrays of tags.
       const baseRaw = this.props.baseComparisonTags.tag;
@@ -50,7 +56,9 @@ class TagsComparison extends React.Component {
       // const commonTags=['test', 'test', 'testtest', 'test', 'test']
       //MAP FUNCTION FOR COMMON TAGS
       const renderCommonTags = commonTags.map((item, index) => (
-        <Text style={styles.renderedTagSingle} key={index}>{item}</Text>
+        <Text style={styles.renderedTagSingle} key={index}>
+          {item}
+        </Text>
       ));
       //RETURN MAP FUNCTION
       return <View style={styles.renderedTags}>{renderCommonTags}</View>;
@@ -61,7 +69,7 @@ class TagsComparison extends React.Component {
     return (
       <View style={styles.tagsContainer}>
         <Text style={styles.infoHeader}>
-          Common tags with {this.props.originalArtist}
+          In common with {this.props.originalArtist}:
         </Text>
         {this.renderComparison()}
       </View>

@@ -113,6 +113,11 @@ const baseStyles = {
     margin: margin.xs,
     padding: padding.xs
   },
+  undefinedData: {
+    color: colors.quadrary,
+    padding: padding.sm,
+  },
+
 };
 
 export default function createStyles(overrides = {}) {

@@ -22,6 +22,9 @@ import { getArtistInfo } from '../../../../actions/artist';
 
 class ArtistInfoMain extends React.Component {
   componentDidMount() {
+    // this.props.dispatch(getArtistInfo('Lush'));
+    
+
     this.props.dispatch(getArtistInfo(this.props.route));
   }
 
