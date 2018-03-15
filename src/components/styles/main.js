@@ -2,27 +2,23 @@ import createStyles, { colors, fonts, margin, padding } from "../baseStyles";
 export default (singleArtistInfo = createStyles({
   input: {
     backgroundColor: colors.white,
-    marginBottom: margin.sm
+    marginVertical: margin.lg
   },
   button: {
-    backgroundColor: colors.tertiary
+    backgroundColor: colors.primary
   },
   appHeader: {
-    backgroundColor: colors.primary,
-    color: colors.tertiary,
-    fontSize: fonts.xl,
+    color: colors.primary,
+    fontSize: fonts.xxl,
     fontFamily: fonts.primary,
-    fontWeight: "bold",
-    padding: padding.md,
-    textAlign: "center"    
+    padding: 0,
+    margin: 0
   },
   appSubHeader: {
-    backgroundColor: "transparent",
-    fontSize: fonts.md,
+    color: colors.primary,
+    fontSize: fonts.lg,
     fontFamily: fonts.primary,
-    fontWeight: "bold",
-    marginBottom: margin.md,
-    padding: padding.sm,
-    textAlign: "center"    
+    padding: 0,
+    margin: 0
   },
 }));

@@ -3,12 +3,11 @@ import React from 'react';
 
 // react native
 import { Actions } from 'react-native-router-flux';
-import { Image } from 'react-native';
-import { Container, Text } from 'native-base';
+import { Image, Text } from 'react-native';
+import { Container } from 'native-base';
 
 // components
 import MainSearch from './main-search';
-// import Test from './test';
 
 // styles
 import styles from './styles/main';
@@ -17,9 +16,9 @@ class Launch extends React.Component {
   render() {
     return (
       <Container>
-        <Text style={styles.appHeader}>TuneCatch</Text>
+        <Text style={[styles.appHeader, styles.leftMargin]}>TuneCatch</Text>
+        <Text style={[styles.appSubHeader, styles.leftMargin]}>new music for everyone</Text>
         <MainSearch />
-        {/* <Test/> */}
       </Container>
     );
   }

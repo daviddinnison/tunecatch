@@ -90,12 +90,6 @@ const baseStyles = {
     marginLeft: margin.sm
   },
   shadow: {
-    // textShadowColor: colors.quadrary,
-    // textShadowOffset: {
-    //   height: 2,
-    //   width: 2
-    // },
-    // textShadowRadius: 15
     textShadowColor: colors.quadrary,
     textShadowOffset: {
       height: 2,
@@ -105,8 +99,8 @@ const baseStyles = {
   },
 
   renderedTagSingle: {
-    borderRightColor: colors.quadrary,
-    borderRightWidth: 2,
+    // borderRightColor: colors.quadrary,
+    // borderRightWidth: 2,
     color: colors.quadrary,
     fontFamily: fonts.primary,
     margin: margin.xs,

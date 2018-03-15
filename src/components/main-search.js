@@ -26,7 +26,7 @@ import styles from "./styles/main";
 
 class MainSearch extends React.Component {
   state = {
-      userInput: "the cranberries"
+      userInput: ""
     };
 
   makeSearch() {
