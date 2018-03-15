@@ -17,9 +17,9 @@ class Gateway extends Component {
     return (
       <Router>
         <Stack key="root">
+          <Scene key="singleAlbum" component={SingleAlbumMain} />
           <Scene key="launch" component={Launch} />
           <Scene key="artistInfo" component={ArtistInfoMain} />
-          <Scene key="singleAlbum" component={SingleAlbumMain} />
           <Scene key="singleTrackMain" component={SingleTrackMain} />
           <Scene key="similarArtists" component={ArtistResultsMain} />
           <Scene key="originalArtistInfo" component={OriginalArtistInfo} />

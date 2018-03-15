@@ -15,7 +15,6 @@ import styles from './styles/main';
 
 class ArtistResultsMain extends React.Component {
   renderSimilarArtists() {
-    console.log('input data', this.props.similarArtists);
     return (
       <FlatList
         data={this.props.similarArtists.slice(0, 5)}

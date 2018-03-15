@@ -42,12 +42,11 @@ export const getSimilarArtist = userInput => dispatch => {
     .then(data => {
       if (data.message) {
         dispatch(getSimilarArtistError(data.message));
-      } 
-      // else if (data.similarartists.artist.length === 0) {
-      //   dispatch(getSimilarArtistError('Artist not found.'));
-      // } 
-      else {
-        console.log('SIMILAR ARTIST DATA FETCH worked', data);
+      } else {
+        // else if (data.similarartists.artist.length === 0) {
+        //   dispatch(getSimilarArtistError('Artist not found.'));
+        // }
+        // console.log('SIMILAR ARTIST DATA FETCH worked', data);
         dispatch(saveOriginalArtist(userInput));
         dispatch(getSimilarArtistSuccess(data.similarartists.artist));
         dispatch(getTagComparison(userInput));

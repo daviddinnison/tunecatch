@@ -20,11 +20,22 @@ import musician from './styles/musician.png';
 
 class SingleAlbumMain extends React.Component {
   componentDidMount() {
-    this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
+    const album = 'Loveless';
+    const artist = 'My Bloody Valentine';
+
+    this.props.dispatch(getAlbumInfo(album, artist));
+    
+    // this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
   }
 
   formatPlays(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  }
+
+  formatDuration(num) {
+    const minutes = Math.floor(num / 60);
+    const seconds = num - minutes * 60;
+    return `${minutes}:${seconds}`;
   }
 
   renderAlbumTags() {
@@ -56,7 +67,7 @@ class SingleAlbumMain extends React.Component {
           }}
         >
           {index + 1}. {item.name}
-          {/*length: {item.duration}*/}
+          length: {this.formatDuration(item.duration)}
         </Text>
       </Content>
     ));
