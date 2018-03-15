@@ -7,8 +7,8 @@ export const dimensions = {
 
 export const colors = {
   primary: '#1e1e1e',
-  secondary: '#f3f3f3', 
-  tertiary: '#F0B917', 
+  secondary: '#f3f3f3',
+  tertiary: '#F0B917',
   quadrary: '#808080',
   white: '#FFFFFF',
   offWhite: '#F9F8EB',
@@ -50,7 +50,7 @@ const baseStyles = {
     width: dimensions.fullWidth
   },
   boxShadow: {
-    elevation: 4,
+    elevation: 4
   },
   header: {
     backgroundColor: 'transparent',
@@ -105,19 +105,18 @@ const baseStyles = {
   },
 
   renderedTagSingle: {
-    borderColor: colors.quadrary,
-    borderWidth: 2,
+    borderRightColor: colors.quadrary,
+    borderRightWidth: 2,
     color: colors.quadrary,
     fontFamily: fonts.primary,
-    fontSize: fonts.sm,
     margin: margin.xs,
-    padding: padding.xs
+    paddingRight: padding.xs,
+    paddingVertical: padding.xs
   },
   undefinedData: {
     color: colors.quadrary,
-    padding: padding.sm,
-  },
-
+    padding: padding.sm
+  }
 };
 
 export default function createStyles(overrides = {}) {
