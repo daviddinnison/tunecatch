@@ -66,6 +66,20 @@ export default (singleArtistInfo = createStyles({
   },
 
   // albums
+  renderedAlbumContainer: {
+    paddingVertical: padding.sm,
+    paddingHorizontal: padding.sm,
+    marginVertical: margin.xs,
+    marginHorizontal: margin.sm,
+    width: 150
+  },
+
+  renderedAlbumText: {
+    color: colors.primary,
+    fontFamily: fonts.primary,
+    fontWeight: 'bold'
+  },
+
   albumMetaFlex: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -107,7 +121,7 @@ export default (singleArtistInfo = createStyles({
     paddingVertical: padding.sm,
     paddingHorizontal: padding.sm,
     marginVertical: margin.xs,
-    marginHorizontal: margin.sm
+    marginRight: margin.sm
   },
   trackHead: {
     color: colors.white,

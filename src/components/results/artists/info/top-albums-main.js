@@ -21,7 +21,7 @@ class TopAlbumsMain extends React.Component {
       return (
         <FlatList
           horizontal={true}
-          data={topAlbums.slice(0, 4)}
+          data={topAlbums.slice(0, 9)}
           keyExtractor={(item, index) => index}
           style={[styles.albumsMainBackground, styles.boxShadow]}
           renderItem={({ item }, index) => (

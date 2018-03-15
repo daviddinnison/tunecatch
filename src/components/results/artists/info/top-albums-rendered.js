@@ -26,12 +26,12 @@ class TopAlbumsRendered extends React.Component {
           });
         }}
       >
-        <View style={styles.trackContainer}>
-          <Text>{this.props.name}</Text>
+        <View style={styles.renderedAlbumContainer} contentContainerStyle={styles.artistMetaFlex}>
           <Image
-            style={{ width: 60, height: 60 }}
+            style={{ width: 70, height: 70 }}
             source={{ uri: this.props.image[1]['#text'] }}
           />
+          <Text style={styles.renderedAlbumText}>{this.props.name}</Text>
         </View>
       </TouchableOpacity>
     );
