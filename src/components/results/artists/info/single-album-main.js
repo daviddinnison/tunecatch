@@ -24,7 +24,7 @@ class SingleAlbumMain extends React.Component {
     const artist = 'My Bloody Valentine';
 
     this.props.dispatch(getAlbumInfo(album, artist));
-    
+
     // this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
   }
 
@@ -58,7 +58,8 @@ class SingleAlbumMain extends React.Component {
           styles.boxShadow
         ]}
       >
-        <Text
+        <Content
+        contentContainerStyle={styles.trackAlbumContainer}
           onPress={() => {
             Actions.singleTrackMain({
               trackRoute: item.name,
@@ -66,9 +67,11 @@ class SingleAlbumMain extends React.Component {
             });
           }}
         >
-          {index + 1}. {item.name}
-          length: {this.formatDuration(item.duration)}
-        </Text>
+          <Text style={styles.trackAlbumName}>
+          {(index + 1)} {item.name}
+          </Text>
+          <Text style={styles.length}>{this.formatDuration(item.duration)}</Text>
+        </Content>
       </Content>
     ));
     return (

@@ -21,7 +21,7 @@ export default (singleArtistInfo = createStyles({
     fontFamily: fonts.primary,
     fontSize: fonts.xxl,
     fontWeight: 'bold',
-    marginLeft: margin.sm,
+    marginLeft: margin.sm
   },
 
   infoHeader: {
@@ -48,8 +48,8 @@ export default (singleArtistInfo = createStyles({
   },
 
   artistImage: {
-    height: dimensions.fullHeight * .4,
-    width: dimensions.fullWidth * .7,
+    height: dimensions.fullHeight * 0.4,
+    width: dimensions.fullWidth * 0.7,
     marginBottom: margin.md
   },
 
@@ -70,7 +70,7 @@ export default (singleArtistInfo = createStyles({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   albumsMainBackground: {
@@ -81,15 +81,14 @@ export default (singleArtistInfo = createStyles({
     color: colors.textDefault,
     fontFamily: fonts.primary,
     fontSize: fonts.xl,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   },
 
   albumArtistNameHead: {
     color: colors.textDefault,
     fontFamily: fonts.primary,
     fontSize: fonts.md,
-    fontWeight: 'bold',
-
+    fontWeight: 'bold'
   },
 
   icon: {
@@ -124,6 +123,21 @@ export default (singleArtistInfo = createStyles({
     color: colors.textDefault,
     fontStyle: 'italic',
     fontFamily: fonts.primary
+  },
+  trackAlbumContainer: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start'
+  },
+
+  trackAlbumName: {
+    
+  },
+
+  length: {
+    color: colors.quadrary,
+    fontStyle: 'italic'
+    
   },
 
   // bio
