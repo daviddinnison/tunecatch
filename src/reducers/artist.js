@@ -37,7 +37,8 @@ const initialState = {
     bio: {},
     tags: { tag: [{ name: '' }] },
     name: '',
-    image: [['#text']]
+    image: [['#text']],
+    stats: {}
   },
   similarArtistTopAlbums: [],
   similarArtistTopTracks: [{ name: '' }],

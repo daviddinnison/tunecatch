@@ -23,6 +23,10 @@ class SingleAlbumMain extends React.Component {
     this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
   }
 
+  formatPlays(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  }
+
   renderAlbumTags() {
     const tagData = this.props.album.tags.tag.map((item, index) => (
       <Text style={styles.renderedTagSingle} key={index}>
@@ -92,6 +96,9 @@ class SingleAlbumMain extends React.Component {
             <Image source={album} style={styles.icon} />
             <Text style={styles.albumName}>{data.name}</Text>
           </Content>
+          <Text style={[styles.playCount, styles.leftMargin]}>
+            {this.formatPlays(data.playcount)} plays
+          </Text>
           <Image
             style={[styles.artistImage, styles.leftMargin]}
             source={{ uri: data.image[2]['#text'] }}

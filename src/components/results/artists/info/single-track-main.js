@@ -36,25 +36,29 @@ class SingleTrackMain extends React.Component {
     //inherited from album action - real version
     // console.log('TRACK PROPS', this.props.trackRoute)
     // console.log('ARTIST PROPS', this.props.artistRoute);
-    this.props.dispatch(getTrackInfo(this.props.trackRoute, this.props.artistRoute))
+    this.props.dispatch(
+      getTrackInfo(this.props.trackRoute, this.props.artistRoute)
+    );
+  }
+
+  formatPlays(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   }
 
   renderInfo() {
     if (this.props.track.wiki) {
       return (
         <View style={styles.container}>
-        <Text style={[styles.bioText]}>
-          {this.props.track.wiki.content}
-        </Text>
+          <Text style={[styles.bioText]}>{this.props.track.wiki.content}</Text>
         </View>
       );
     } else {
       return (
         <View style={styles.container}>
-        <Text style={[styles.bioText]}>
-          There is currently no wiki content for this track. Content is
-          submitted via the Last.fm platform.
-        </Text>
+          <Text style={[styles.bioText]}>
+            There is currently no wiki content for this track. Content is
+            submitted via the Last.fm platform.
+          </Text>
         </View>
       );
     }
@@ -82,7 +86,7 @@ class SingleTrackMain extends React.Component {
           <Content contentContainerStyle={[styles.leftMargin]}>
             <Text style={[styles.albumName, styles.shadow]}>{data.name}</Text>
             <Text style={[styles.playCount, styles.leftMargin]}>
-              {data.playcount.toLocaleString('en')} plays
+              {this.formatPlays(data.playcount)} plays
             </Text>
           </Content>
           <Image

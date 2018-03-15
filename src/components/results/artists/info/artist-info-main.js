@@ -25,20 +25,29 @@ class ArtistInfoMain extends React.Component {
     this.props.dispatch(getArtistInfo(this.props.route));
   }
 
+  formatPlays(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  }
+
   renderData() {
     const data = this.props.similarArtistInfo;
     return (
       <Content style={styles.artistInfoContainer}>
         <Content style={styles.artistHead}>
           <Text style={[styles.artistName, styles.shadow]}>{data.name}</Text>
+          <Text style={[styles.playCount, styles.leftMargin]}>
+            {this.formatPlays(data.stats.playcount)} plays
+          </Text>
         </Content>
-        <Content contentContainerStyle={[styles.artistMetaFlex, styles.leftMargin]}>
-            {/* <Tour /> */}
-            <Image
-              style={styles.artistImage}
-              source={{ uri: data.image[2]['#text'] }}
-            />
-            <TagsComparison style={styles.tagsContainer} />
+        <Content
+          contentContainerStyle={[styles.artistMetaFlex, styles.leftMargin]}
+        >
+          {/* <Tour /> */}
+          <Image
+            style={styles.artistImage}
+            source={{ uri: data.image[2]['#text'] }}
+          />
+          <TagsComparison style={styles.tagsContainer} />
         </Content>
         <TopAlbumsMain artistName={data.name} />
         <TopTracksMain artistName={data.name} />

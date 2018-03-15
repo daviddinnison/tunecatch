@@ -9,6 +9,10 @@ import { Actions } from 'react-native-router-flux';
 import styles from './styles/main';
 
 class TopTracksRendered extends React.Component {
+  formatPlays(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  }
+
   render() {
     return (
       <TouchableOpacity
@@ -24,7 +28,7 @@ class TopTracksRendered extends React.Component {
         <View style={styles.trackContainer}>
           <Text style={styles.trackName}>{this.props.name}</Text>
           <Text style={styles.trackPlays}>
-            plays: {this.props.playcount.toLocaleString('en')}
+            plays: {this.formatPlays(this.props.playcount)}
           </Text>
         </View>
       </TouchableOpacity>
