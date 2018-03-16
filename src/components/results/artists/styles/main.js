@@ -9,9 +9,8 @@ import createStyles, {
 export default (singleArtistInfo = createStyles({
   originalArtistHeader: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,
+    fontFamily: fonts.secondary,    
     fontSize: fonts.xxl,
-    fontWeight: 'bold',
   },
   originalArtistTagContainer: {
     alignItems: 'center',
@@ -43,9 +42,8 @@ export default (singleArtistInfo = createStyles({
   },
   resultName: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,
+    fontFamily: fonts.bold,    
     fontSize: fonts.lg,
-    fontWeight: 'bold'
   },
   match: {
     color: colors.quadrary,

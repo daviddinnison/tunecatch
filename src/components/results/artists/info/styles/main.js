@@ -10,7 +10,7 @@ export default (singleArtistInfo = createStyles({
   artistInfoContainer: {
     backgroundColor: colors.secondary
   },
-  
+
   // header
   artistHead: {
     marginBottom: margin.md
@@ -18,24 +18,22 @@ export default (singleArtistInfo = createStyles({
 
   artistName: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
+    fontFamily: fonts.secondary,
     fontSize: fonts.xxl,
-    fontWeight: 'bold',
     marginLeft: margin.sm
   },
 
   infoHeader: {
     color: colors.textDefault,
+    fontFamily: fonts.bold,
     fontFamily: fonts.secondary,
-    fontSize: fonts.md,
-    fontWeight: 'bold'
+    fontSize: fonts.md
   },
 
   playCount: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,
-    fontSize: fonts.sm,
-    fontStyle: 'italic'
+    fontFamily: fonts.italic,
+    fontSize: fonts.sm
   },
 
   // album image
@@ -76,8 +74,7 @@ export default (singleArtistInfo = createStyles({
 
   renderedAlbumText: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
-    fontWeight: 'bold'
+    fontFamily: fonts.bold
   },
 
   albumMetaFlex: {
@@ -93,16 +90,14 @@ export default (singleArtistInfo = createStyles({
 
   albumName: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
+    fontFamily: fonts.secondary,    
     fontSize: fonts.xl,
-    fontWeight: 'bold'
   },
 
   albumArtistNameHead: {
     color: colors.textDefault,
-    fontFamily: fonts.primary,
-    fontSize: fonts.md,
-    fontWeight: 'bold'
+    fontFamily: fonts.bold,
+    fontSize: fonts.md
   },
 
   icon: {
@@ -130,13 +125,11 @@ export default (singleArtistInfo = createStyles({
   },
   trackName: {
     color: colors.textDefault,
-    fontWeight: 'bold',
-    fontFamily: fonts.secondary
+    fontFamily: fonts.bold    
   },
   trackPlays: {
     color: colors.textDefault,
-    fontStyle: 'italic',
-    fontFamily: fonts.primary
+    fontFamily: fonts.italic
   },
   trackAlbumContainer: {
     flexDirection: 'column',
@@ -144,14 +137,11 @@ export default (singleArtistInfo = createStyles({
     justifyContent: 'flex-start'
   },
 
-  trackAlbumName: {
-    
-  },
+  trackAlbumName: {},
 
   length: {
     color: colors.quadrary,
-    fontStyle: 'italic'
-    
+    fontFamily: fonts.italic
   },
 
   // bio

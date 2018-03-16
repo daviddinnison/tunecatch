@@ -42,7 +42,10 @@ export const fonts = {
   // primary: 'open-sans-regular', //serif
   // secondary: 'Roboto_medium' //sans serif
   primary: 'pt-serif-web-regular', //serif
-  secondary: 'pt-sans-web-regular' //sans serif  
+  secondary: 'pt-sans-web-regular', //sans serif  
+  italic: 'pt-sans-web-italic',
+  bold: 'pt-sans-web-bold',
+  
 };
 
 const baseStyles = {
@@ -56,9 +59,8 @@ const baseStyles = {
   },
   header: {
     backgroundColor: 'transparent',
-    fontFamily: fonts.primary,
+    fontFamily: fonts.bold,
     fontSize: fonts.xl,
-    fontWeight: 'bold',
     textAlign: 'center'
   },
   image: {
@@ -69,9 +71,8 @@ const baseStyles = {
   },
   subHeader: {
     backgroundColor: 'transparent',
-    fontFamily: fonts.secondary,
+    fontFamily: fonts.bold,
     fontSize: fonts.md,
-    fontWeight: 'bold',
     textAlign: 'center'
   },
   leftMargin: {

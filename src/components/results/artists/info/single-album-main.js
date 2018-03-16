@@ -16,17 +16,15 @@ import { getAlbumInfo } from '../../../../actions/artist';
 
 // styles
 import styles from './styles/main';
-import album from './styles/album.png';
-import musician from './styles/musician.png';
 
 class SingleAlbumMain extends React.Component {
   componentDidMount() {
-    // const album = 'Loveless';
-    // const artist = 'My Bloody Valentine';
+    const album = 'Loveless';
+    const artist = 'My Bloody Valentine';
 
-    // this.props.dispatch(getAlbumInfo(album, artist));
+    this.props.dispatch(getAlbumInfo(album, artist));
 
-    this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
+    // this.props.dispatch(getAlbumInfo(this.props.route, this.props.artistName));
   }
 
   formatPlays(num) {
@@ -109,8 +107,7 @@ class SingleAlbumMain extends React.Component {
       return (
         <Content>
           <Content contentContainerStyle={styles.albumMetaFlex}>
-            <Image source={album} style={styles.icon} />
-            <Text style={styles.albumName}>{data.name}</Text>
+            <Text style={[styles.albumName, styles.shadow]}>{data.name}</Text>
           </Content>
           <Text style={[styles.playCount, styles.leftMargin]}>
             {this.formatPlays(data.playcount)} plays
@@ -120,8 +117,7 @@ class SingleAlbumMain extends React.Component {
             source={{ uri: data.image[2]['#text'] }}
           />
           <Content contentContainerStyle={styles.albumMetaFlex}>
-            <Image source={musician} style={styles.icon} />
-            <Text style={styles.albumArtistNameHead}>{data.artist}</Text>
+            <Text style={[styles.albumArtistNameHead, styles.shadow]}>{data.artist}</Text>
           </Content>
           <Content contentContainerStyle={styles.artistMetaData}>
             {this.renderAlbumTags()}
