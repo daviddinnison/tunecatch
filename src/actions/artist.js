@@ -73,7 +73,6 @@ export const getArtistInfoSuccess = artistInfo => ({
 export const getArtistInfo = userInput => dispatch => {
   dispatch(getArtistInfoRequest());
   const formattedInput = encodeURIComponent(userInput);
-  console.log("FORMATTED INPUIT getARtistInfo", formattedInput)
   fetch(
     `${API_BASE_URL}?method=artist.getInfo&artist=${formattedInput}&api_key=${API_KEY}&format=json`,
     {}
@@ -103,8 +102,9 @@ export const getTagComparisonSuccess = data => ({
 });
 
 export const getTagComparison = userInput => dispatch => {
+  const formattedInput = encodeURIComponent(userInput);  
   fetch(
-    `${API_BASE_URL}?method=artist.getinfo&artist=${userInput}&api_key=${API_KEY}&format=json`,
+    `${API_BASE_URL}?method=artist.getinfo&artist=${formattedInput}&api_key=${API_KEY}&format=json`,
     {}
   )
     .then(res => {
@@ -137,8 +137,9 @@ export const getTopTracksSuccess = data => ({
 
 export const getTopTracks = userInput => dispatch => {
   dispatch(getTopTracksRequest());
+  const formattedInput = encodeURIComponent(userInput);  
   fetch(
-    `${API_BASE_URL}?method=artist.gettoptracks&artist=${userInput}&api_key=${API_KEY}&format=json`,
+    `${API_BASE_URL}?method=artist.gettoptracks&artist=${formattedInput}&api_key=${API_KEY}&format=json`,
     {}
   )
     .then(res => {
@@ -169,8 +170,9 @@ export const getTopAlbumsSuccess = data => ({
 
 export const getTopAlbums = userInput => dispatch => {
   dispatch(getTopAlbumsRequest());
+  const formattedInput = encodeURIComponent(userInput);
   fetch(
-    `${API_BASE_URL}?method=artist.gettopalbums&artist=${userInput}&api_key=${API_KEY}&format=json`,
+    `${API_BASE_URL}?method=artist.gettopalbums&artist=${formattedInput}&api_key=${API_KEY}&format=json`,
     {}
   )
     .then(res => {
@@ -201,8 +203,10 @@ export const getAlbumInfoSuccess = data => ({
 });
 
 export const getAlbumInfo = (albumName, artistName) => dispatch => {
+  const formattedAlbum = encodeURIComponent(albumName);
+  const formattedArtist = encodeURIComponent(artistName);
   dispatch(getAlbumInfoRequest());
-  const url = `${API_BASE_URL}?method=album.getinfo&api_key=${API_KEY}&artist=${artistName}&album=${albumName}&format=json`;
+  const url = `${API_BASE_URL}?method=album.getinfo&api_key=${API_KEY}&artist=${formattedArtist}&album=${formattedAlbum}&format=json`;
   fetch(url, {})
     .then(res => {
       if (!res.ok) {
@@ -238,8 +242,10 @@ export const getTrackInfoError = error => ({
 });
 
 export const getTrackInfo = (trackName, artistName) => dispatch => {
+  const formattedTrack = encodeURIComponent(trackName);
+  const formattedArtist = encodeURIComponent(artistName);
   dispatch(getTrackInfoRequest());
-  const url = `${API_BASE_URL}?method=track.getInfo&api_key=${API_KEY}&artist=${artistName}&track=${trackName}&format=json`;
+  const url = `${API_BASE_URL}?method=track.getInfo&api_key=${API_KEY}&artist=${formattedArtist}&track=${formattedTrack}&format=json`;
   fetch(url, {})
     .then(res => {
       if (!res.ok) {
@@ -249,7 +255,6 @@ export const getTrackInfo = (trackName, artistName) => dispatch => {
       return res.json();
     })
     .then(data => {
-      console.log('----------SUCCESSFUL ALBUM INFO-------', data);
       if (data.message) {
         dispatch(getTrackInfoError(data.message));
       } else {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 // react native
 import { Content, Text } from 'native-base';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import HTMLView from 'react-native-htmlview';
 
@@ -59,8 +59,8 @@ class SingleAlbumMain extends React.Component {
           styles.boxShadow
         ]}
       >
-        <Content
-        contentContainerStyle={styles.trackAlbumContainer}
+        <TouchableOpacity
+        style={styles.trackAlbumContainer}
           onPress={() => {
             Actions.singleTrackMain({
               trackRoute: item.name,
@@ -72,7 +72,7 @@ class SingleAlbumMain extends React.Component {
           {(index + 1)} {item.name}
           </Text>
           <Text style={styles.length}>{this.formatDuration(item.duration)}</Text>
-        </Content>
+        </TouchableOpacity>
       </Content>
     ));
     return (
