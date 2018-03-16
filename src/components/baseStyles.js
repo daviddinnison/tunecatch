@@ -39,8 +39,10 @@ export const fonts = {
   lg: 22,
   xl: 28,
   xxl: 36,
-  primary: 'open-sans-regular', //serif
-  secondary: 'Roboto_medium' //sans serif
+  // primary: 'open-sans-regular', //serif
+  // secondary: 'Roboto_medium' //sans serif
+  primary: 'pt-serif-web-regular', //serif
+  secondary: 'pt-sans-web-regular' //sans serif  
 };
 
 const baseStyles = {
@@ -67,7 +69,7 @@ const baseStyles = {
   },
   subHeader: {
     backgroundColor: 'transparent',
-    fontFamily: fonts.primary,
+    fontFamily: fonts.secondary,
     fontSize: fonts.md,
     fontWeight: 'bold',
     textAlign: 'center'
@@ -95,7 +97,7 @@ const baseStyles = {
       height: 2,
       width: 2
     },
-    textShadowRadius: 25
+    textShadowRadius: 5
   },
 
   renderedTagSingle: {
@@ -109,6 +111,7 @@ const baseStyles = {
   },
   undefinedData: {
     color: colors.quadrary,
+    fontFamily: fonts.primary,
     padding: padding.sm
   }
 };

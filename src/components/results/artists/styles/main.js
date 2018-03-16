@@ -8,8 +8,8 @@ import createStyles, {
 
 export default (singleArtistInfo = createStyles({
   originalArtistHeader: {
-    color: colors.primary,
-    fontFamily: fonts.primary,
+    color: colors.textDefault,
+    fontFamily: fonts.secondary,
     fontSize: fonts.xxl,
     fontWeight: 'bold',
   },
@@ -42,8 +42,14 @@ export default (singleArtistInfo = createStyles({
     width: undefined
   },
   resultName: {
-    fontFamily: fonts.primary,
+    color: colors.textDefault,
+    fontFamily: fonts.secondary,
     fontSize: fonts.lg,
     fontWeight: 'bold'
+  },
+  match: {
+    color: colors.quadrary,
+    fontFamily: fonts.secondary,
+    fontSize: fonts.md
   }
 }));

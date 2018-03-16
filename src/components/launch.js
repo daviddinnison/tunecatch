@@ -15,8 +15,8 @@ import styles from './styles/main';
 class Launch extends React.Component {
   render() {
     return (
-      <Container>
-        <Text style={[styles.appHeader, styles.leftMargin]}>TuneCatch</Text>
+      <Container style={styles.appBackground}>
+        <Text style={[styles.appHeader, styles.leftMargin, styles.shadow]}>TuneCatch</Text>
         <Text style={[styles.appSubHeader, styles.leftMargin]}>new music for everyone</Text>
         <MainSearch />
       </Container>

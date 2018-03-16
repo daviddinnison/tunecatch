@@ -75,7 +75,7 @@ export default (singleArtistInfo = createStyles({
   },
 
   renderedAlbumText: {
-    color: colors.primary,
+    color: colors.textDefault,
     fontFamily: fonts.primary,
     fontWeight: 'bold'
   },

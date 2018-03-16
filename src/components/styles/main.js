@@ -7,18 +7,25 @@ export default (singleArtistInfo = createStyles({
   button: {
     backgroundColor: colors.primary
   },
-  appHeader: {
-    color: colors.primary,
-    fontSize: fonts.xxl,
+  buttonText: {
+    color: colors.secondary,
     fontFamily: fonts.primary,
+  },
+  appHeader: {
+    color: colors.textDefault,
+    fontSize: fonts.xxl,
+    fontFamily: fonts.secondary,
     padding: 0,
     margin: 0
   },
   appSubHeader: {
-    color: colors.primary,
+    color: colors.textDefault,
     fontSize: fonts.lg,
-    fontFamily: fonts.primary,
+    fontFamily: fonts.secondary,
     padding: 0,
     margin: 0
   },
+  appBackground: {
+    backgroundColor: colors.secondary
+  }
 }));

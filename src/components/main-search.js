@@ -38,7 +38,7 @@ class MainSearch extends React.Component {
     if (this.props.loading) {
       return <Loader />;
     } else {
-      return <Text>Catch me some tunes</Text>;
+      return <Text style={styles.buttonText}>Catch me some tunes</Text>;
     }
   }
 

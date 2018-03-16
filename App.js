@@ -22,7 +22,10 @@ export default class App extends React.Component {
   async componentDidMount() {
     await Font.loadAsync({
       'open-sans-regular': require('./assets/fonts/OpenSans-Regular.ttf'),
-      Roboto_medium: require('./assets/fonts/Roboto-Medium.ttf')
+      Roboto_medium: require('./assets/fonts/Roboto-Medium.ttf'),
+      'pt-sans-web-regular': require('./assets/fonts/PT_Sans-Web-Regular.ttf'),
+      'pt-serif-web-regular': require('./assets/fonts/PT_Serif-Web-Regular.ttf'),
+      
     });
 
     this.setState({ fontLoaded: true });

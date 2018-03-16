@@ -18,9 +18,8 @@ class ArtistResultsMain extends React.Component {
     if (!this.props.similarArtists.length) {
       return (
         <Text style={styles.undefinedData}>
-          This artist does not have any similar artists....yet. This may be due
-          to the artist being recently listed on Last.fm. Please try another
-          search.
+          This artist does not have any similar artists....yet. Please try another
+          artist.
         </Text>
       );
     } else {
