@@ -27,9 +27,10 @@ export const saveOriginalArtist = originalArtist => ({
 
 export const getSimilarArtist = userInput => dispatch => {
   dispatch(getSimilarArtistRequest());
+  const formattedInput = encodeURIComponent(userInput);
   console.log('similar ARTIST fetch is starting....', userInput);
   fetch(
-    `${API_BASE_URL}?method=artist.getsimilar&artist=${userInput}&api_key=${API_KEY}&format=json`,
+    `${API_BASE_URL}?method=artist.getsimilar&artist=${formattedInput}&api_key=${API_KEY}&format=json`,
     {}
   )
     .then(res => {
@@ -71,8 +72,10 @@ export const getArtistInfoSuccess = artistInfo => ({
 
 export const getArtistInfo = userInput => dispatch => {
   dispatch(getArtistInfoRequest());
+  const formattedInput = encodeURIComponent(userInput);
+  console.log("FORMATTED INPUIT getARtistInfo", formattedInput)
   fetch(
-    `${API_BASE_URL}?method=artist.getInfo&artist=${userInput}&api_key=${API_KEY}&format=json`,
+    `${API_BASE_URL}?method=artist.getInfo&artist=${formattedInput}&api_key=${API_KEY}&format=json`,
     {}
   )
     .then(res => {
