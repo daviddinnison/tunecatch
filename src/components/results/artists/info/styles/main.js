@@ -74,7 +74,7 @@ export default (singleArtistInfo = createStyles({
 
   renderedAlbumText: {
     color: colors.textDefault,
-    fontFamily: fonts.bold
+    fontFamily: fonts.italic
   },
 
   albumMetaFlex: {
@@ -98,13 +98,6 @@ export default (singleArtistInfo = createStyles({
     color: colors.textDefault,
     fontFamily: fonts.bold,
     fontSize: fonts.md
-  },
-
-  icon: {
-    height: 15,
-    // paddingRight: padding.md,
-    marginHorizontal: margin.sm,
-    width: 15
   },
 
   // tracks

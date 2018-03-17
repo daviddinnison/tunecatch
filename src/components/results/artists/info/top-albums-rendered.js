@@ -2,13 +2,7 @@
 import React from 'react';
 
 // react native
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 // styles
@@ -18,7 +12,7 @@ class TopAlbumsRendered extends React.Component {
   render() {
     return (
       <TouchableOpacity
-      underlayColor={'#fff'}
+        underlayColor={'#fff'}
         onPress={() => {
           Actions.singleAlbum({
             route: this.props.name,
@@ -26,7 +20,10 @@ class TopAlbumsRendered extends React.Component {
           });
         }}
       >
-        <View style={styles.renderedAlbumContainer} contentContainerStyle={styles.artistMetaFlex}>
+        <View
+          style={styles.renderedAlbumContainer}
+          contentContainerStyle={styles.artistMetaFlex}
+        >
           <Image
             style={{ width: 70, height: 70 }}
             source={{ uri: this.props.image[1]['#text'] }}
