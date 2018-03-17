@@ -21,7 +21,7 @@ class SimilarArtistResult extends React.Component {
         <Card style={styles.resultContainer}>
           <Container style={styles.resultInfo}>
             <CardItem>
-              <Text style={styles.resultName}>{this.props.name}</Text>
+              <Text style={[styles.resultName, styles.shadow]}>{this.props.name}</Text>
             </CardItem>
             <CardItem>
               <Text>{(this.props.match * 100).toFixed(2)}% match</Text>

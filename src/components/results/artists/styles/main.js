@@ -42,7 +42,7 @@ export default (singleArtistInfo = createStyles({
   },
   resultName: {
     color: colors.textDefault,
-    fontFamily: fonts.bold,    
+    fontFamily: fonts.secondary,    
     fontSize: fonts.lg,
   },
   match: {

@@ -22,9 +22,9 @@ import { getArtistInfo } from '../../../../actions/artist';
 
 class ArtistInfoMain extends React.Component {
   componentDidMount() {
-    this.props.dispatch(getArtistInfo('Kanye West'));
+    // this.props.dispatch(getArtistInfo('Kanye West'));
     
-    // this.props.dispatch(getArtistInfo(this.props.route));
+    this.props.dispatch(getArtistInfo(this.props.route));
   }
 
   formatPlays(num) {

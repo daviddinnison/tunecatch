@@ -112,7 +112,7 @@ class SingleTrackMain extends React.Component {
   }
 
   render() {
-    return <Content>{this.renderTrack()}</Content>;
+    return <Content style={styles.artistInfoContainer}>{this.renderTrack()}</Content>;
   }
 }
 
