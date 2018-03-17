@@ -1,9 +1,9 @@
 //react
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
 //react native
-import { Keyboard } from "react-native";
+import { Keyboard } from 'react-native';
 import {
   Button,
   Container,
@@ -13,21 +13,21 @@ import {
   Item,
   SearchBar,
   Text
-} from "native-base";
+} from 'native-base';
 
 // components
-import Loader from "./common/loader";
+import Loader from './common/loader';
 
 // actions
-import { getSimilarArtist } from "./../actions/artist";
+import { getSimilarArtist } from './../actions/artist';
 
 // style
-import styles from "./styles/main";
+import styles from './styles/main';
 
 class MainSearch extends React.Component {
   state = {
-      userInput: "blink 182"
-    };
+    userInput: ''
+  };
 
   makeSearch() {
     Keyboard.dismiss();
@@ -43,8 +43,8 @@ class MainSearch extends React.Component {
   }
 
   renderError() {
-    if(this.props.error) {
-      return <Text>{this.props.error}</Text>
+    if (this.props.error) {
+      return <Text>{this.props.error}</Text>;
     }
   }
 
@@ -61,7 +61,7 @@ class MainSearch extends React.Component {
                   userInput: input
                 })
               }
-              />
+            />
           </Item>
           <Button
             full
@@ -69,7 +69,7 @@ class MainSearch extends React.Component {
             onPress={() => {
               this.makeSearch();
             }}
-            >
+          >
             {this.renderButtonText()}
           </Button>
           {this.renderError()}

@@ -18,14 +18,15 @@ class ArtistResultsMain extends React.Component {
     if (!this.props.similarArtists.length) {
       return (
         <Text style={styles.undefinedData}>
-          This artist does not have any similar artists....yet. Please try another
-          artist.
+          This artist does not have any similar artists....yet. Please try
+          another artist.
         </Text>
       );
     } else {
       return (
         <FlatList
-          data={this.props.similarArtists.slice(0, 5)}
+          // data={this.props.similarArtists.slice(0, 5)}
+          data={this.props.similarArtists}
           keyExtractor={(item, index) => index}
           renderItem={({ item }) => (
             <SimilarArtistResult
