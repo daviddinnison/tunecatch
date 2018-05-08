@@ -7,11 +7,10 @@ export const dimensions = {
 
 export const colors = {
   primary: '#1e1e1e',
-  secondary: '#f3f3f3',
-  tertiary: '#F0B917',
+  secondary: '#ff5e3a',
   quadrary: '#808080',
-  white: '#FFFFFF',
-  offWhite: '#F9F8EB',
+  white: '#fff',
+  offWhite: '#f3f3f3',
   textDefault: '#323232',
   affirmative: '#008000',
   negative: '#800000'
@@ -39,8 +38,6 @@ export const fonts = {
   lg: 22,
   xl: 28,
   xxl: 36,
-  // primary: 'open-sans-regular', //serif
-  // secondary: 'Roboto_medium' //sans serif
   primary: 'pt-serif-web-regular', //serif
   secondary: 'pt-sans-web-regular', //sans serif  
   italic: 'pt-sans-web-italic',
@@ -102,8 +99,6 @@ const baseStyles = {
   },
 
   renderedTagSingle: {
-    // borderRightColor: colors.quadrary,
-    // borderRightWidth: 2,
     color: colors.quadrary,
     fontFamily: fonts.primary,
     margin: margin.xs,

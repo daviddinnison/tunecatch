@@ -1,14 +1,14 @@
 import createStyles, { colors, fonts, margin, padding } from "../baseStyles";
 export default (singleArtistInfo = createStyles({
   input: {
-    backgroundColor: colors.white,
+    // backgroundColor: colors.white,
     marginVertical: margin.lg
   },
   button: {
-    backgroundColor: colors.primary
+    backgroundColor: colors.secondary
   },
   buttonText: {
-    color: colors.secondary,
+    color: colors.offWhite,
     fontFamily: fonts.primary,
   },
   appHeader: {
@@ -26,6 +26,6 @@ export default (singleArtistInfo = createStyles({
     margin: 0
   },
   appBackground: {
-    backgroundColor: colors.secondary
+    backgroundColor: colors.offWhite
   }
 }));

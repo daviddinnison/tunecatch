@@ -8,7 +8,7 @@ import createStyles, {
 
 export default (singleArtistInfo = createStyles({
   artistInfoContainer: {
-    backgroundColor: colors.secondary
+    backgroundColor: colors.offWhite
   },
 
   // header

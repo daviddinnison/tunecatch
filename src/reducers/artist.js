@@ -74,7 +74,7 @@ export default function reducer(state = initialState, action) {
       });
     }
     case 'GET_SIMILAR_ARTIST_ERROR': {
-      console.log('reucer error', action.error);
+      console.log('reucer error 22', action.error);
       return Object.assign({}, state, {
         error: {
           ...state.error,

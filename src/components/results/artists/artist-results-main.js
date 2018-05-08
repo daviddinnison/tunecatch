@@ -25,7 +25,6 @@ class ArtistResultsMain extends React.Component {
     } else {
       return (
         <FlatList
-          // data={this.props.similarArtists.slice(0, 5)}
           data={this.props.similarArtists}
           keyExtractor={(item, index) => index}
           renderItem={({ item }) => (

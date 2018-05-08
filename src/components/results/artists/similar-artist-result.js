@@ -14,6 +14,7 @@ class SimilarArtistResult extends React.Component {
     return (
       <TouchableOpacity
         underlayColor={'#fff'}
+        style={styles.opacityContainer}
         onPress={() => {
           Actions.artistInfo({ route: this.props.name });
         }}

@@ -1,16 +1,10 @@
-import createStyles, {
-  colors,
-  dimensions,
-  fonts,
-  margin,
-  padding
-} from '../../../baseStyles';
+import createStyles, { colors, dimensions, fonts, margin, padding } from '../../../baseStyles';
 
 export default (singleArtistInfo = createStyles({
   originalArtistHeader: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,    
-    fontSize: fonts.xxl,
+    fontFamily: fonts.secondary,
+    fontSize: fonts.xxl
   },
   originalArtistTagContainer: {
     alignItems: 'center',
@@ -21,7 +15,6 @@ export default (singleArtistInfo = createStyles({
     padding: padding.sm
   },
   originalArtistTagText: {
-    backgroundColor: 'red',
     alignSelf: 'center',
     height: undefined,
     width: undefined
@@ -34,7 +27,6 @@ export default (singleArtistInfo = createStyles({
     padding: padding.sm
   },
   resultInfo: {
-    backgroundColor: 'red',
     alignSelf: 'center',
     flex: 3,
     height: undefined,
@@ -42,8 +34,8 @@ export default (singleArtistInfo = createStyles({
   },
   resultName: {
     color: colors.textDefault,
-    fontFamily: fonts.secondary,    
-    fontSize: fonts.lg,
+    fontFamily: fonts.secondary,
+    fontSize: fonts.lg
   },
   match: {
     color: colors.quadrary,

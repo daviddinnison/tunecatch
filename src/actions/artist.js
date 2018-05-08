@@ -26,6 +26,7 @@ export const saveOriginalArtist = originalArtist => ({
 });
 
 export const getSimilarArtist = userInput => dispatch => {
+  console.log(userInput)
   dispatch(getSimilarArtistRequest());
   const formattedInput = encodeURIComponent(userInput);
   console.log('similar ARTIST fetch is starting....', userInput);
