@@ -21,23 +21,6 @@ import styles from './styles/main';
 
 class SingleTrackMain extends React.Component {
   componentDidMount() {
-    //error
-    // const track = 'fsdfsdfss';
-    // const artist = 'lllklk';
-
-    //with wiki
-    // const track = 'Temperature';
-    // const artist = 'Sean Paul';
-
-    //without wiki
-    // const track = 'Flower Power';
-    // const artist = 'Ringo Deathstarr';
-
-    // this.props.dispatch(getTrackInfo(track, artist));
-
-    //inherited from album action - real version
-    // console.log('TRACK PROPS', this.props.trackRoute)
-    // console.log('ARTIST PROPS', this.props.artistRoute);
     this.props.dispatch(
       getTrackInfo(this.props.trackRoute, this.props.artistRoute)
     );

@@ -21,7 +21,6 @@ import { getArtistInfo } from '../../../../actions/artist';
 class OriginalArtistInfo extends React.Component {
   renderData() {
     const data = this.props.originalArtistInfo;
-    console.log('DATA', data);
     return (
       <View style={styles.mainSection}>
         <Text style={styles.header}>{data.name}</Text>

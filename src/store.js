@@ -2,12 +2,10 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
 import artistReducer from './reducers/artist';
-import tagReducer from './reducers/tag';
 
 const store = createStore(
   combineReducers({
-    artist: artistReducer,
-    tag: tagReducer
+    artist: artistReducer
   }),
   applyMiddleware(thunk)
 );
